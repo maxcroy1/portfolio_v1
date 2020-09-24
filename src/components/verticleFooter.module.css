@@ -13,8 +13,22 @@
     font-style: normal;
     font-weight: bold;
     font-size: 1rem;
-    line-height: 1.15rem;
-    /* transform: rotate(-90deg); */
+    transform: rotate(-90deg);
     width: 100%;
-    margin: auto 0;
+    position: relative;
+    right: 4rem;
+}
+
+.topText {
+    transform: rotate(-90deg) translate(-48%);
+}
+
+.icon {
+    margin: 0 100% 0 0.5rem;
+}
+
+.decoration {
+    border: solid #000 2px;
+    height: 4rem;
+    width: 0;
 }
