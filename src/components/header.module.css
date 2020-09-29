@@ -1,0 +1,20 @@
+.links p { 
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    display: inline;
+    margin: 1rem;
+}
+
+.container {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.links {
+    float: right;
+    width: auto;
+    padding-right: 5rem;
+}

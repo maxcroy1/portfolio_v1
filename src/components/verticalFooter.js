@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./verticleFooter.module.css"
+import styles from "./verticalFooter.module.css"
 import GitHub from "../icons/iconmonstr-github-1.svg"
 import LinkedIn from "../icons/iconmonstr-linkedin-1.svg"
 import Twitter from "../icons/iconmonstr-twitter-1.svg"

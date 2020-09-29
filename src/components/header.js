@@ -1,35 +1,47 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import headerStyles from "./header.module.css"
+import scrollToElement from "scroll-to-element"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <header className={headerStyles.container}>
+    <div className={headerStyles.links}>
+      <p>
+        <Link to="/#about" onClick={ e => handleLinkClick(e, '#about')} style={{color: "black", textDecoration: "none"}} activeStyle={{color: "blue", textDecoration: "underline"}} partiallyActive={true}>
+          1. About
         </Link>
-      </h1>
+      </p>
+      <p>
+        <Link to="/#experience" onClick={ e => handleLinkClick(e, '#experience')} style={{color: "black", textDecoration: "none"}}>
+          2. Experience
+        </Link>
+      </p>
+      <p>
+        <Link to="/#work" onClick={ e => handleLinkClick(e, '#work')} style={{color: "black", textDecoration: "none"}}>
+          3. Work
+        </Link>
+      </p>
+      <p>
+        <Link to="/#contact" onClick={ e => handleLinkClick(e, '#contact')} style={{color: "black", textDecoration: "none"}}>
+          4. Contact
+        </Link>
+      </p>
     </div>
   </header>
 )
+
+const handleLinkClick = (e, target) => {
+
+  if (typeof window !== 'undefined') {
+    if (e) e.preventDefault()
+    scrollToElement(target, {
+      offset: -95,
+      duration: 1000,
+    })
+  }
+
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
