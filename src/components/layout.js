@@ -31,7 +31,9 @@ const Layout = ({ children }) => {
       flexDirection: "column"
     }}>
       <Header />
+      <main style={{flexGrow: 1}}>
         {children}
+      </main>
       <Footer />
     </div>
   )

@@ -18,10 +18,18 @@ export default class Footer extends React.Component {
                 </div>
                 <div>
                     <div className={styles.icons}>
-                        <GitHub className={styles.icon}/>
-                        <LinkedIn className={styles.icon} />
-                        <Twitter className={styles.icon} />
-                        <Medium className={styles.icon} />
+                        <a href="https://github.com/maxcroy1">
+                            <GitHub className={styles.icon}/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/maxwellhcroy/">
+                            <LinkedIn className={styles.icon} />
+                        </a>
+                        <a href="https://twitter.com/MaxCroy1">
+                            <Twitter className={styles.icon} />
+                        </a>
+                        <a href="https://medium.com/@MaxCroy1">
+                            <Medium className={styles.icon} />
+                        </a>
                     </div>
                     <div className={styles.decoration}></div>
                 </div>

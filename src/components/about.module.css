@@ -1,0 +1,47 @@
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 3rem 7rem 3rem 11rem;
+}
+
+.content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    text-align: left;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 50%;
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.title {
+    font-size: 6.7rem;
+}
+
+.bio {
+    font-size: 1.6rem;
+    line-height: 2rem;
+}
+.column{
+    width: 50%;
+    margin-left: 0;
+    display: inline-block;
+}
+
+.technologies {
+    margin-left: 1.45rem;
+}

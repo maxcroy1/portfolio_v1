@@ -6,6 +6,6 @@ body {
     margin: 0px;
 }
 
-div[role="group"][tabindex] {
+div[tabindex] {
     height: 100%;
 }
