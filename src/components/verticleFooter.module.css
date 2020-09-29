@@ -17,6 +17,7 @@
     width: 100%;
     position: relative;
     right: 4rem;
+    text-align: center;
 }
 
 .topText {
@@ -27,8 +28,13 @@
     margin: 0 100% 0 0.5rem;
 }
 
+.icons {
+    margin-bottom: 0.5rem;
+}
+
 .decoration {
     border: solid #000 2px;
     height: 4rem;
     width: 0;
+    margin-left: 1rem;
 }

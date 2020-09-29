@@ -3,6 +3,7 @@ import styles from "./verticleFooter.module.css"
 import GitHub from "../icons/iconmonstr-github-1.svg"
 import LinkedIn from "../icons/iconmonstr-linkedin-1.svg"
 import Twitter from "../icons/iconmonstr-twitter-1.svg"
+import Medium from "../icons/iconmonstr-medium-1.svg"
 
 export default class Footer extends React.Component {
     render() {
@@ -16,9 +17,12 @@ export default class Footer extends React.Component {
                     <p className={styles.text}>&#169; {new Date().getUTCFullYear()} Maxwell Croy</p>
                 </div>
                 <div>
-                    <GitHub className={styles.icon}/>
-                    <LinkedIn className={styles.icon} />
-                    <Twitter className={styles.icon} />
+                    <div className={styles.icons}>
+                        <GitHub className={styles.icon}/>
+                        <LinkedIn className={styles.icon} />
+                        <Twitter className={styles.icon} />
+                        <Medium className={styles.icon} />
+                    </div>
                     <div className={styles.decoration}></div>
                 </div>
             </div>
