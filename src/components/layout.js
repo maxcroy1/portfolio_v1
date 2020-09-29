@@ -7,28 +7,33 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+// import { useStaticQuery, graphql } from "gatsby"
 import Header from './header'
 import Footer from './verticalFooter'
 
 import './layout.css'
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
-    <>
+    <div style={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: "column"
+    }}>
       <Header />
+        {children}
       <Footer />
-    </>
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@
 
 .container {
     z-index: 0;
-    position: fixed;
+    position: absolute;
     width: 100%;
     margin: 2rem 0;
 }
@@ -16,5 +16,5 @@
 .links {
     float: right;
     width: auto;
-    padding-right: 5rem;
+    padding-right: 7rem;
 }
