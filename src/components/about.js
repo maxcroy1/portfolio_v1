@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from './Image'
 import aboutStyles from './about.module.css'
 
 export default function About() {
@@ -26,14 +25,9 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <div className={aboutStyles.image}>
-                <Image 
-                src="8B5EE3DA-0B7F-47D9-B34A-7A48AD681F4C_1_105_c.jpeg"
-                alt="Image of Maxwell Croy"
-                style={{height: "60%", width: "60%", margin: "0 auto", filter: "drop-shadow(1.5rem 1.5rem #000)"}}
-                imageStyle={{filter: "drop-shadow(.5rem .5rem 1rem #000)"}}
-                />
-            </div>
+            {/* <div className={aboutStyles.image}>
+                <img src={require('../images/8B5EE3DA-0B7F-47D9-B34A-7A48AD681F4C_1_105_c.jpeg')} style={{height: '300px'}} />
+            </div> */}
        </div>
     )
 }

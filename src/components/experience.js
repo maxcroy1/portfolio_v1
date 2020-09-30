@@ -3,8 +3,10 @@ import experienceStyles from './experience.module.css'
 
 export default function Experience() {
     return (
-        <div>
-            <h1>Experience</h1>
+        <div className={experienceStyles.container}>
+            <div className={experienceStyles.content}>
+                <h1 className={experienceStyles.title}><u>EXPERIENCE</u></h1>
+            </div>
         </div>
     )
 }
