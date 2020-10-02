@@ -2,7 +2,7 @@
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 14px;
     display: inline;
     margin: 1rem;
 }
@@ -18,5 +18,5 @@
 .links {
     float: right;
     width: auto;
-    padding-right: 7rem;
+    padding-right: 6rem;
 }
