@@ -16,12 +16,16 @@
     transform: rotate(-90deg);
     width: 100%;
     position: relative;
-    right: 5vh;
+    right: 60px;
     text-align: center;
 }
 
 .topText {
     transform: rotate(-90deg) translate(-48%);
+}
+
+.midText {
+    transform: rotate(-90deg) translate(-41%);
 }
 
 .icon {
@@ -34,7 +38,7 @@
 
 .decoration {
     border: solid #000 2px;
-    height: 4rem;
+    height: 50px;
     width: 0;
     margin-left: 1rem;
 }

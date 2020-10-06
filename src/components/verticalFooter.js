@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
                     <p className={`${styles.text} ${styles.topText}`}><a style={{color: '#000'}} href="mailto:me@maxcroy.com">me@maxcroy.com</a></p>
                 </div>
                 <div>
-                    <p className={styles.text}>&#169; {new Date().getUTCFullYear()} Maxwell Croy</p>
+                    <p className={`${styles.text} ${styles.midText}`}>&#169; {new Date().getUTCFullYear()} Maxwell Croy</p>
                 </div>
                 <div>
                     <div className={styles.icons}>
