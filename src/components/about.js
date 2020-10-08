@@ -1,7 +1,9 @@
 import React from 'react'
 import aboutStyles from './about.module.css'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
-export default function About() {
+export default function About({data}) {
     return (
         <div className={aboutStyles.container}>
             <div className={aboutStyles.content}>
@@ -27,7 +29,20 @@ export default function About() {
             </div>
             {/* <div className={aboutStyles.image}>
                 <img src={require('../images/8B5EE3DA-0B7F-47D9-B34A-7A48AD681F4C_1_105_c.jpeg')} style={{height: '300px'}} />
+                <Img fluid={data.imageOne.childImageSharp.fluid} />
             </div> */}
        </div>
     )
 }
+
+export const pageQuery = graphql`
+    query {
+        imageOne: file(relativePath: { eq: "headshot.jpg" }) {
+            childImageSharp {
+                fluid(maxWidth: 500) {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+`;
