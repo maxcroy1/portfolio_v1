@@ -1,9 +1,26 @@
 import React from 'react'
 import aboutStyles from './about.module.css'
-import { graphql } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
+import Headshot from '../images/headshot.jpeg'
 import Img from 'gatsby-image'
 
-export default function About({data}) {
+export default function About() {
+    const data = useStaticQuery(graphql`
+    query MyQuery {
+        file(relativePath: {eq: "headshot.jpeg"}) {
+          childImageSharp {
+            fluid {
+              aspectRatio
+              base64
+              sizes
+              src
+              srcSet
+            }
+          }
+        }
+      }
+    `)
+
     return (
         <div className={aboutStyles.container}>
             <div className={aboutStyles.content}>
@@ -27,22 +44,11 @@ export default function About({data}) {
                     </div>
                 </div>
             </div>
-            {/* <div className={aboutStyles.image}>
-                <img src={require('../images/8B5EE3DA-0B7F-47D9-B34A-7A48AD681F4C_1_105_c.jpeg')} style={{height: '300px'}} />
-                <Img fluid={data.imageOne.childImageSharp.fluid} />
-            </div> */}
+            <div className={aboutStyles.image}>
+                {/* <img src={Headshot} alt="Headshot of Max Croy" />
+                <img src={require('../images/8B5EE3DA-0B7F-47D9-B34A-7A48AD681F4C_1_105_c.jpeg')} style={{height: '300px'}} /> */}
+                <Img fluid={data.file.childImageSharp.fluid} alt="Maxwell Croy headshot." />
+            </div>
        </div>
     )
 }
-
-export const pageQuery = graphql`
-    query {
-        imageOne: file(relativePath: { eq: "headshot.jpg" }) {
-            childImageSharp {
-                fluid(maxWidth: 500) {
-                    ...GatsbyImageSharpFluid
-                }
-            }
-        }
-    }
-`;
