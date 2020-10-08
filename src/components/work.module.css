@@ -8,7 +8,7 @@
 .content {
     position: relative;
     top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     width: 50%;
     text-align: left;
     font-family: Helvetica;
@@ -18,5 +18,5 @@
 }
 
 .title {
-    font-size: 6.7rem;
+    font-size: 80px;
 }

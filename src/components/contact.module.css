@@ -2,15 +2,16 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    padding-left: 11rem;
+    padding: 0 7rem 0 11rem;
 }
 
 .content {
     position: relative;
     top: 50%;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     width: 50%;
-    text-align: left;
+    float: right;
+    text-align: right;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
@@ -18,5 +19,5 @@
 }
 
 .title {
-    font-size: 6.7rem;
+    font-size: 80px;
 }
