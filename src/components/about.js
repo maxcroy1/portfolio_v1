@@ -45,8 +45,6 @@ export default function About() {
                 </div>
             </div>
             <div className={aboutStyles.image}>
-                {/* <img src={Headshot} alt="Headshot of Max Croy" />
-                <img src={require('../images/8B5EE3DA-0B7F-47D9-B34A-7A48AD681F4C_1_105_c.jpeg')} style={{height: '300px'}} /> */}
                 <Img fluid={data.file.childImageSharp.fluid} alt="Maxwell Croy headshot." />
             </div>
        </div>
