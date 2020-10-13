@@ -37,7 +37,10 @@
 }
 
 .image {
-    position: relative;
+    position: absolute;
+    transform: translateY(-80%);
+    left: 60%;
     top: 50%;
-    transform: translateY(-50%);
+    width: 20%;
+    display: inline-block;
 }
