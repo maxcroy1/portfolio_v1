@@ -2,14 +2,18 @@
     position: relative;
     height: 100vh;
     width: 100%;
-    padding: 0 11rem;
+    padding: 0 7rem 0 11rem;
     display: inline-block;
 }
 
-.content {
+.contentContainer {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+    width: 100%;
+}
+
+.content {
     width: 50%;
     text-align: left;
     font-family: Helvetica;
@@ -36,11 +40,16 @@
     margin-left: 1.45rem;
 }
 
-.image {
+.imgContainer {
     position: absolute;
-    transform: translateY(-80%);
-    left: 60%;
     top: 50%;
-    width: 20%;
+    transform: translateY(-50%);
+    width: 50%;
     display: inline-block;
+}
+
+.image {
+    width: 68%;
+    margin: auto;
+    filter: drop-shadow(12px 12px black);
 }
