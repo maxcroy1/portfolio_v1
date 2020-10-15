@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby"
 import scrollToElement from "scroll-to-element"
-import heroStyles from './hero.module.css'
+import heroStyles from '../styles/hero.module.css'
 
 export default function Hero() {
     return (

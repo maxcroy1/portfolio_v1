@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutStyles from './about.module.css'
+import aboutStyles from '../styles/about.module.css'
 import { graphql, useStaticQuery } from 'gatsby'
 import Headshot from '../images/headshot.jpeg'
 import Img from 'gatsby-image'

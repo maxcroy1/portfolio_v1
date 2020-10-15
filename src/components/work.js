@@ -1,5 +1,5 @@
 import React from 'react'
-import workStyles from './work.module.css'
+import workStyles from '../styles/work.module.css'
 
 export default function Work() {
     return (

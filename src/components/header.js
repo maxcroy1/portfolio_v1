@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import headerStyles from "./header.module.css"
+import headerStyles from "../styles/header.module.css"
 import scrollToElement from "scroll-to-element"
 
 const Header = ({ siteTitle }) => (

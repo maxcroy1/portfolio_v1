@@ -1,5 +1,5 @@
 import React from 'react'
-import experienceStyles from './experience.module.css'
+import experienceStyles from '../styles/experience.module.css'
 
 export default function Experience() {
     return (
