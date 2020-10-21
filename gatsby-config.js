@@ -26,8 +26,31 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `jobs`,
         path: `${__dirname}/content/jobs`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            // https://www.gatsbyjs.org/packages/gatsby-remark-external-links
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow noopener noreferrer',
+              plugins: [],
+            },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,

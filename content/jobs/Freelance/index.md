@@ -1,4 +1,5 @@
 ---
+date: '2020-09-01'
 title: 'Freelance Software Developer'
 company: ''
 location: 'New York, NY'

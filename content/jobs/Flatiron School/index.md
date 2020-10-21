@@ -1,4 +1,5 @@
 ---
+date: '2020-05-01'
 title: 'Student'
 company: 'Flatiron School'
 location: 'New York, NY'

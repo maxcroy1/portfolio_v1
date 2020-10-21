@@ -1,4 +1,5 @@
 ---
+date: '2017-08-01'
 title: 'Client Strategy Manager'
 company: 'Wunderkind, formerly known as BounceX'
 location: 'New York, NY'
