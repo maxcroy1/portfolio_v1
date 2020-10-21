@@ -12,20 +12,20 @@
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
-    font-size: 2vh;
-    transform: rotate(-90deg);
+    font-size: 18px;
     width: 100%;
     position: relative;
-    right: 60px;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
 .topText {
-    transform: rotate(-90deg) translate(-48%);
+    transform: rotate(-90deg) translate(-48%, -270%);
 }
 
 .midText {
-    transform: rotate(-90deg) translate(-41%);
+    transform: rotate(-90deg) translate(-41%, -270%);
 }
 
 .icon {
