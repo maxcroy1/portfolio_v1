@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Maxwell Croy || Software Developer`,
+    description: `Maxwell Croy is a Brooklyn-based Software Engineer and Full Stack Web Developer`,
+    author: `Maxwell Croy`,
   },
   plugins: [
     {
@@ -21,6 +21,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `jobs`,
+        path: `${__dirname}/content/jobs`,
       },
     },
     `gatsby-transformer-sharp`,
