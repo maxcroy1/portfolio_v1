@@ -21,3 +21,24 @@
 .title {
     font-size: 80px;
 }
+
+.blurb {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+}
+
+.contact {
+    font-family: Helvetica;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+    border: solid 4px #000;
+    padding: 10px;
+}
+
+.makeBlock {
+    display: block;
+    margin: 40px 0 0 0;
+}

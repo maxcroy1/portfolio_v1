@@ -49,7 +49,7 @@ export default function Experience() {
                   </span>
                 </h2>
                 <p>{range}</p>
-                <div dangerouslySetInnerHTML={{ __html: html }} />
+                <div className={experienceStyles.bullets} dangerouslySetInnerHTML={{ __html: html }} />
               </div>
             );
           })}
