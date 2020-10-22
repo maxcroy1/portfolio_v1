@@ -60,7 +60,7 @@ export default function Experience() {
               {jobsData.map(({ node }, i) => {
                 const { company } = node.frontmatter;
                 return (
-                <li onClick={() => setTab(i)} key={i}>{company}</li>
+                <li onClick={() => setTab(i)} key={i}><span className={ tab === i ? experienceStyles.selected : '' }>{company}</span></li>
                 );
               })}
           </ul>
