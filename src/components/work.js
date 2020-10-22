@@ -8,6 +8,7 @@ export default function Work() {
                 <div className={workStyles.container}>
                     <div className={workStyles.content}>
                         <h1 className={workStyles.title}><u>WORK</u></h1>
+                        <h1 className={workStyles.soon}>COMING SOON</h1>
                     </div>
                 </div>
             </div>
