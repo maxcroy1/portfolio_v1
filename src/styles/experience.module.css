@@ -15,12 +15,12 @@
 
 .tabs {
     width: 50%;
-    text-align: right;
+    text-align: left;
     font-family: Helvetica;
     font-style: normal;
     font-weight: bold;
     display: inline-block;
-    position: absolute;
+    position: relative;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -36,7 +36,7 @@
     font-style: normal;
     font-weight: bold;
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }

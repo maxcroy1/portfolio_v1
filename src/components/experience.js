@@ -32,6 +32,17 @@ export default function Experience() {
   return (
     <div className={experienceStyles.container}>
       <div className={experienceStyles.contentContainer}>
+        <div className={experienceStyles.tabs}>
+          <h1 className={experienceStyles.title}><u>EXPERIENCE</u></h1>
+          <ul>
+              {jobsData.map(({ node }, i) => {
+                const { company } = node.frontmatter;
+                return (
+                <li onClick={() => setTab(i)} key={i}><span className={ tab === i ? experienceStyles.selected : '' }>{company}</span></li>
+                );
+              })}
+          </ul>
+        </div>
         <div className={experienceStyles.description}>
           {jobsData.map(({ node }, i) => {
             const { frontmatter, html } = node;
@@ -53,17 +64,6 @@ export default function Experience() {
               </div>
             );
           })}
-        </div>
-        <div className={experienceStyles.tabs}>
-          <h1 className={experienceStyles.title}><u>EXPERIENCE</u></h1>
-          <ul>
-              {jobsData.map(({ node }, i) => {
-                const { company } = node.frontmatter;
-                return (
-                <li onClick={() => setTab(i)} key={i}><span className={ tab === i ? experienceStyles.selected : '' }>{company}</span></li>
-                );
-              })}
-          </ul>
         </div>
       </div>
     </div>
