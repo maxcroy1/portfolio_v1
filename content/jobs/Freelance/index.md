@@ -1,7 +1,7 @@
 ---
 date: '2020-09-01'
-title: 'Freelance Software Developer'
-company: ''
+title: 'Software Developer'
+company: 'Freelance'
 location: 'New York, NY'
 range: 'September 2020 - Present'
 url: ''
