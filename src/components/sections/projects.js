@@ -4,6 +4,7 @@ const Projects = () => {
   return (
     <>
       <h2>Projects</h2>
+      <h2>Coming Soon</h2>
     </>
   );
 };
