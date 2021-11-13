@@ -5,7 +5,15 @@ import styled from "styled-components";
 import { navLinks } from "../config";
 
 const StyledLinks = styled.div`
-    display: flex;
+
+    li{
+      font-weight: bold;
+    }
+
+    a {
+      color: black;
+      text-decoration: none;
+    }
 `;
 
 const Nav = () => {
