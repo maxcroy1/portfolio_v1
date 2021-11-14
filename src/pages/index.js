@@ -15,6 +15,13 @@ const GlobalStyle = createGlobalStyle`
     background-color: #FAF2E5;
     font-family: Helvetica, sans-serif;
   }
+
+  h1 {
+    font-size: 7em;
+    text-transform: uppercase;
+    line-height: 1em;
+    margin: auto;
+  }
 `;
 
 const IndexPage = () => {
