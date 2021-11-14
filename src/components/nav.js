@@ -6,10 +6,16 @@ import { navLinks } from "../config";
 
 const StyledLinks = styled.div`
   position: fixed;
-  margin: auto 5vw;
-  top: 2vh;
-  right: 0;
+  top: 0;
   background-color: #FAF2E5;
+  z-index: 1000;
+  width: 100vw;
+
+  ul {
+    position: absolute;
+    right: 0;
+    margin: 5vh 6vw 0 0;
+  }
 
   li {
     font-weight: bold;
