@@ -10,7 +10,7 @@ const HeroContainer = styled.div`
 const HeroContent = styled.div`
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); 
+  transform: translateY(-50%);
   text-align: right;
   right: 0;
   margin-right: 5%;
@@ -36,8 +36,16 @@ const Hero = () => {
   return (
     <HeroContainer>
       <HeroContent>
-        <h1>Maxwell<br /><u>Croy</u></h1>
-        <p>Software Engineer<br />// web3 Developer</p>
+        <h1>
+          Maxwell
+          <br />
+          <u>Croy</u>
+        </h1>
+        <p>
+          Software Engineer
+          <br />
+          // web3 Developer
+        </p>
         <a href="/#contact">Get In Touch</a>
       </HeroContent>
     </HeroContainer>
