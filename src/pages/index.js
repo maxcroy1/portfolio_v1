@@ -22,6 +22,16 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1em;
     margin: auto;
   }
+
+  h2 {
+    font-size: 3.8em;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  p {
+    font-weight: bold;
+  }
 `;
 
 const IndexPage = () => {

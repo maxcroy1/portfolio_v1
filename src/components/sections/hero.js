@@ -4,7 +4,6 @@ import styled from "styled-components";
 const HeroContainer = styled.div`
   height: 100vh;
   position: relative;
-  z-index: 0;
 `;
 
 const HeroContent = styled.div`

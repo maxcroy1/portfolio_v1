@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 import { Nav, Footer } from "../components";
 
@@ -9,17 +8,14 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]');
 }
 
-const StyledContent = styled.div`
-`;
-
 const Layout = ({ children }) => {
   return (
     <>
-      <StyledContent>
+      <div>
         <Nav />
         <div id="content">{children}</div>
         <Footer />
-      </StyledContent>
+      </div>
     </>
   );
 };

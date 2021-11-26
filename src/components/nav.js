@@ -7,8 +7,8 @@ import { navLinks } from "../config";
 const StyledLinks = styled.div`
   position: fixed;
   top: 0;
-  background-color: #faf2e5;
-  z-index: 1000;
+  background-color: #FAF2E5;
+  z-index: 0;
   width: 100vw;
 
   ul {
