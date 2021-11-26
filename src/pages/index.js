@@ -32,6 +32,19 @@ const GlobalStyle = createGlobalStyle`
   p {
     font-weight: bold;
   }
+
+  h3 {
+    margin: 0;
+    font-size: 1.5em;
+
+    a {
+      color: black;
+    }
+  }
+
+  h4 {
+    margin: 0;
+  }
 `;
 
 const IndexPage = () => {

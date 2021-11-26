@@ -48,7 +48,7 @@ const Experience = () => {
     ul {
       padding-left: 0;
     }
-    
+
     li {
       list-style: none;
       padding: 0;
@@ -78,6 +78,20 @@ const Experience = () => {
     text-transform: uppercase;
   `;
 
+  const ExperienceDescription = styled.div`
+    width: 450px;
+
+    h4 {
+      margin-top: 10px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      line-height: 1.2em;
+      font-weight: bold;
+    }
+  `;
+
   return (
     <ExperienceContainer>
       <ExperienceButtons>
@@ -94,7 +108,7 @@ const Experience = () => {
                     key={i}
                     isActive={activeTabId === i}
                     onClick={() => setActiveTabId(i)}
-                    className={activeTabId === i ? 'selected' : null}
+                    className={activeTabId === i ? "selected" : null}
                   >
                     {company}
                   </Employer>
@@ -104,24 +118,26 @@ const Experience = () => {
         </ul>
       </ExperienceButtons>
       <ExperienceContent>
-        {jobsData &&
-          jobsData.map(({ node }, i) => {
-            const { frontmatter, body } = node;
-            const { title, url, company, range } = frontmatter;
+        <ExperienceDescription>
+          {jobsData &&
+            jobsData.map(({ node }, i) => {
+              const { frontmatter, body } = node;
+              const { title, url, company, range } = frontmatter;
 
-            return (
-              <div hidden={activeTabId !== i}>
-                <h3>
-                  {title} at{" "}
-                  <a href={url} target="_blank" rel="noreferrer">
-                    {company}
-                  </a>
-                </h3>
-                <h4>{range}</h4>
-                <MDXRenderer>{body}</MDXRenderer>
-              </div>
-            );
-          })}
+              return (
+                <div hidden={activeTabId !== i}>
+                  <h3>
+                    {title} at{" "}
+                    <a href={url} target="_blank" rel="noreferrer">
+                      {company}
+                    </a>
+                  </h3>
+                  <h4>{range}</h4>
+                  <MDXRenderer>{body}</MDXRenderer>
+                </div>
+              );
+            })}
+        </ExperienceDescription>
       </ExperienceContent>
     </ExperienceContainer>
   );
