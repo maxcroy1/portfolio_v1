@@ -5,7 +5,6 @@ import styled from "styled-components";
 const AboutContainer = styled.div`
   height: 100vh;
   position: relative;
-  z-index: 0;
   margin-left: 200px;
 `;
 
