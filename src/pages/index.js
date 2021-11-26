@@ -26,6 +26,7 @@ const GlobalStyle = createGlobalStyle`
   h2 {
     font-size: 3.8em;
     text-transform: uppercase;
+    text-decoration: underline;
     margin: 0;
   }
 

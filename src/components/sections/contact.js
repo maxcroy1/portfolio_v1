@@ -1,10 +1,25 @@
 import React from "react";
+import styled from "styled-components";
+
+const ContactContainer = styled.div`
+  height: 100vh;
+  position: relative;
+  margin-left: 200px;
+`;
+
+const ContactMessageContainer = styled.div`
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+`;
 
 const Contact = () => {
   return (
-    <>
-      <h2>Contact Me</h2>
-    </>
+    <ContactContainer>
+      <ContactMessageContainer>
+        <h2>Contact</h2>
+      </ContactMessageContainer>
+    </ContactContainer>
   );
 };
 
