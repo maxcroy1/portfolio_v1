@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 import { Nav, Footer } from "../components";
 
@@ -8,14 +9,25 @@ if (typeof window !== "undefined") {
   require("smooth-scroll")('a[href*="#"]');
 }
 
+const ContentContainer = styled.div`
+  position: relative;
+  z-index: 1;
+`;
+
 const Layout = ({ children }) => {
   return (
     <>
-      <div>
-        <Nav />
-        <div id="content">{children}</div>
-        <Footer />
-      </div>
+      <ContentContainer>
+        <div style={{ zIndex: "2", position: "fixed" }}>
+          <Nav />
+        </div>
+        <div style={{ zIndex: "1", position: "relative" }}>
+          <div id="content">{children}</div>
+        </div>
+        <div style={{ zIndex: "3", position: "relative" }}>
+          <Footer />
+        </div>
+      </ContentContainer>
     </>
   );
 };

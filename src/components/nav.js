@@ -6,10 +6,12 @@ import { navLinks } from "../config";
 
 const StyledLinks = styled.div`
   position: fixed;
+  isolation: isolate;
   top: 0;
+  left: 0;
   background-color: #FAF2E5;
-  z-index: 0;
-  width: 100vw;
+  width: 100%;
+  height: 100px;
 
   ul {
     position: absolute;
