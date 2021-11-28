@@ -6,15 +6,14 @@ import { Icon } from "../components/icons";
 
 const FooterContainer = styled.div`
   background-color: #fb5704;
-  left: 0;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  width: 30px;
+  justify-content: space-between;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  width: 30px;
 `;
 
 const StyledSocialLinks = styled.div`
@@ -29,28 +28,30 @@ const StyledSocialLinks = styled.div`
 `;
 
 const DecorativeDiv = styled.div`
-  height: 40px;
-  width: 3px;
   background-color: black;
+  height: 40px;
   margin-left: 50px;
+  width: 3px;
 `;
 
 const StyledEmailSection = styled.div``;
 
 const StyledEmail = styled.a`
-  display: block;
-  transform: rotate(-90deg);
-  margin-left: 50px;
-  margin-top: 135px;
   color: black;
+  display: block;
+  font-weight:bold;
+  margin-left: 50px;
+  margin-top: 140px;
+  text-decoration: none;
+  transform: rotate(-90deg);
 `;
 
 const StyledCopyright = styled.p`
-  transform: rotate(-90deg);
-  margin-left: 50px;
-  width: 160px;
-  position: relative;
   left: -80px;
+  margin-left: 50px;
+  position: relative;
+  transform: rotate(-90deg);
+  width: 160px;
 `;
 
 const Footer = () => {
