@@ -4,32 +4,32 @@ import styled from "styled-components";
 
 const HeroContainer = styled.div`
   height: 100vh;
-  position: relative;
   isolation: isolate;
+  position: relative;
 `;
 
 const HeroContent = styled.div`
+  margin-right: 5%;
   position: absolute;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
-  right: 0;
-  margin-right: 5%;
 
   p {
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: 1.8em;
+    font-weight: bold;
     margin: 2vh auto 4vh;
+    text-transform: uppercase;
   }
 
   a {
-    padding: 1vh 1vw;
     border: solid black 2px;
+    color: black;
+    font-weight: bold;
+    padding: 1vh 1vw;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: bold;
-    color: black;
   }
 `;
 
