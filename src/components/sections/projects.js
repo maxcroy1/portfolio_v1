@@ -3,24 +3,24 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.div`
   height: 100vh;
-  position: relative;
   margin-left: 200px;
+  position: relative;
 `;
 
 const ProjectSelectorContainer = styled.div`
+  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  float: left;
 `;
 
 const ProjectContentContainer = styled.div`
+  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  float: left;
 `;
 
 const ComingSoon = styled.h2`

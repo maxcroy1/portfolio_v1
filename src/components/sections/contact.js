@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 const ContactContainer = styled.div`
   height: 100vh;
-  position: relative;
   margin-left: 200px;
+  position: relative;
 `;
 
 const ContactMessageContainer = styled.div`
@@ -15,13 +15,13 @@ const ContactMessageContainer = styled.div`
 `;
 
 const EmailButton = styled.a`
-  padding: 1vh 1vw;
   border: solid black 2px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-weight: bold;
   color: black;
   display: inline-block;
+  font-weight: bold;
+  padding: 1vh 1vw;
+  text-transform: uppercase;
+  text-decoration: none;
 `;
 
 const Contact = () => {
