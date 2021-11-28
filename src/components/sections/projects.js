@@ -36,7 +36,7 @@ const ComingSoon = styled.h2`
 
 const Projects = () => {
   return (
-    <ProjectsContainer>
+    <ProjectsContainer  id="projects">
       <ProjectSelectorContainer>
         <h2>Projects</h2>
       </ProjectSelectorContainer>

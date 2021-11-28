@@ -42,7 +42,7 @@ const AboutList = styled.ul`
 
 const About = () => {
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <AboutContentContainer>
         <AboutContent>
           <h2>

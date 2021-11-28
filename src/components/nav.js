@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { Link, animateScroll as scroll } from "react-scroll";
 import styled from "styled-components";
 
 import { navLinks } from "../config";
@@ -9,7 +9,7 @@ const StyledLinks = styled.div`
   isolation: isolate;
   top: 0;
   left: 0;
-  background-color: #FAF2E5;
+  background-color: #faf2e5;
   width: 100%;
   height: 100px;
 
@@ -39,7 +39,13 @@ const Nav = () => {
         {navLinks &&
           navLinks.map(({ url, name }, i) => (
             <li key={i}>
-              <Link to={url}>
+              <Link
+                activeClass="active"
+                to={url}
+                spy={true}
+                smooth={true}
+                duration={600}
+              >
                 {i + 1}. {name}
               </Link>
             </li>

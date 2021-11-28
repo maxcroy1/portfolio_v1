@@ -46,6 +46,14 @@ const GlobalStyle = createGlobalStyle`
   h4 {
     margin: 0;
   }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  a.active {
+    border-bottom: 2px solid black;
+  }
 `;
 
 const IndexPage = () => {

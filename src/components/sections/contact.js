@@ -26,7 +26,7 @@ const EmailButton = styled.a`
 
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer  id="contact">
       <ContactMessageContainer>
         <h2>Contact</h2>
         <p>
