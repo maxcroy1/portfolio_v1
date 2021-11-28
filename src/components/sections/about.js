@@ -4,16 +4,16 @@ import styled from "styled-components";
 
 const AboutContainer = styled.div`
   height: 100vh;
-  position: relative;
   margin-left: 200px;
+  position: relative;
 `;
 
 const AboutContentContainer = styled.div`
+  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  float: left;
 `;
 
 const AboutContent = styled.div`
@@ -21,11 +21,11 @@ const AboutContent = styled.div`
 `;
 
 const ImageContainer = styled.div`
+  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  float: left;
 `;
 
 const ImageContent = styled.div`
