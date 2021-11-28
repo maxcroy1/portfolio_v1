@@ -18,16 +18,16 @@ const GlobalStyle = createGlobalStyle`
 
   h1 {
     font-size: 7em;
-    text-transform: uppercase;
     line-height: 1em;
     margin: auto;
+    text-transform: uppercase;
   }
 
   h2 {
     font-size: 3.8em;
-    text-transform: uppercase;
-    text-decoration: underline;
     margin: 0;
+    text-decoration: underline;
+    text-transform: uppercase;
   }
 
   p {
