@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const HeroContainer = styled.div`
@@ -46,7 +47,13 @@ const Hero = () => {
           <br />
           {`//`} web3 Developer
         </p>
-        <a href="/#contact">Get In Touch</a>
+        <Link
+          to="contact"
+          smooth={true}
+          duration={600}
+        >
+          Get In Touch
+        </Link>
       </HeroContent>
     </HeroContainer>
   );

@@ -5,11 +5,11 @@ import styled from "styled-components";
 import { navLinks } from "../config";
 
 const StyledLinks = styled.div`
-  position: fixed;
-  isolation: isolate;
-  top: 0;
-  left: 0;
   background-color: #faf2e5;
+  isolation: isolate;
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100px;
 
@@ -20,8 +20,8 @@ const StyledLinks = styled.div`
   }
 
   li {
-    font-weight: bold;
     font-size: 0.8em;
+    font-weight: bold;
     display: inline;
     padding-left: 1vw;
   }
