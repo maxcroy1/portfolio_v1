@@ -34,16 +34,16 @@ const Experience = () => {
 
   const ExperienceContainer = styled.div`
     height: 100vh;
-    position: relative;
     margin-left: 200px;
+    position: relative;
   `;
 
   const ExperienceButtons = styled.div`
+    float: left;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
-    float: left;
 
     ul {
       padding-left: 0;
@@ -51,8 +51,8 @@ const Experience = () => {
 
     li {
       list-style: none;
-      padding: 0;
       margin-bottom: 10px;
+      padding: 0;
     }
 
     .selected {
@@ -61,21 +61,21 @@ const Experience = () => {
   `;
 
   const ExperienceContent = styled.div`
+    float: left;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
-    float: left;
   `;
 
   const Employer = styled.button`
     background-color: #faf2e5;
     border: none;
     display: inline;
-    vertical-align: middle;
     font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
+    vertical-align: middle;
   `;
 
   const ExperienceDescription = styled.div`
@@ -86,9 +86,9 @@ const Experience = () => {
     }
 
     li {
-      margin-bottom: 10px;
-      line-height: 1.2em;
       font-weight: bold;
+      line-height: 1.2em;
+      margin-bottom: 10px;
     }
   `;
 
