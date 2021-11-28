@@ -44,7 +44,7 @@ const Hero = () => {
         <p>
           Software Engineer
           <br />
-          // web3 Developer
+          {`//`} web3 Developer
         </p>
         <a href="/#contact">Get In Touch</a>
       </HeroContent>
