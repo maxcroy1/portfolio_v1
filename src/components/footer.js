@@ -5,15 +5,25 @@ import { socialMedia, email } from "../config";
 import { Icon } from "../components/icons";
 
 const FooterContainer = styled.div`
-  background-color: #fb5704;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: space-between;
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 30px;
+  @media screen and (min-width: 1008px) {
+    background-color: #fb5704;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 30px;
+  }
+
+  @media screen and (min-width: 641px) and (max-width: 1007px) {
+    display: none;
+  }
+
+  @media screen and (max-width: 641px){
+    display: none;
+  }
 `;
 
 const StyledSocialLinks = styled.div`

@@ -6,6 +6,10 @@ import { Nav, Footer } from "../components";
 const ZOne = styled.div`
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 const ZTwo = styled.div`
