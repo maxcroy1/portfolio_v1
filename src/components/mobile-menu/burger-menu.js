@@ -13,36 +13,51 @@ const StyledMenu = styled.nav`
   right: 0;
   text-align: right;
   top: 0;
-  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(+100%)'};;
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(+100%)")};
   transition: transform 0.3s ease-in-out;
+  width: 100%;
 
-  @media (max-width: 640px) {
-    width: 100%;
+  ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  li {
+    margin: 10px 0;
   }
 
   a {
-    font-size: 2rem;
-    text-transform: uppercase;
-    padding: 1rem 0;
-    font-weight: bold;
     color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     transition: color 0.3s linear;
-
-    @media (max-width: 640px) {
-      font-size: 1.5rem;
-      text-align: center;
-    }
   }
 `;
 
-const BurgerMenu = ({ open }) => {
+const BurgerMenu = ({ open, navLinks }) => {
   return (
     <StyledMenu open={open}>
-      <a href="/">1. About</a>
-      <a href="/">2. Experience</a>
-      <a href="/">3. Projects</a>
-      <a href="/">4. Contact</a>
+      <ul>
+        {navLinks &&
+          navLinks.map(({ url, name }, i) => (
+            <li key={i}>
+              <Link
+                activeClass="active"
+                to={url}
+                spy={true}
+                smooth={true}
+                duration={600}
+              >
+                {i + 1}. {name}
+              </Link>
+            </li>
+          ))}
+      </ul>
     </StyledMenu>
   );
 };

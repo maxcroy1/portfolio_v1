@@ -44,7 +44,7 @@ const Nav = () => {
       {window.innerWidth && window.innerWidth <= 640 ? (
         <BurgerContainer>
           <Burger open={open} setOpen={setOpen} />
-          <BurgerMenu open={open} setOpen={setOpen} />
+          <BurgerMenu open={open} setOpen={setOpen} navLinks={navLinks} />
         </BurgerContainer>
       ) : (
         <StyledLinks>
