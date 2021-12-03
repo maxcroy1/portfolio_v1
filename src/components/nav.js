@@ -43,7 +43,7 @@ const Nav = () => {
     if (window !== undefined) {
       setInnerWidth(window.innerWidth);
     };
-  });
+  }, []);
 
   return (
     <>
