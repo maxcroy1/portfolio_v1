@@ -6,6 +6,10 @@ const AboutContainer = styled.div`
   height: 100vh;
   position: relative;
 
+  @media screen and (max-width: 640px) {
+    margin: 0 5%;
+  }
+
   @media screen and (min-width: 641px) {
     margin-left: 200px;
   }
@@ -15,10 +19,6 @@ const AboutContentContainer = styled.div`
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-
-  @media screen and (max-width: 640px) {
-    margin: 0 5%;
-  }
 
   @media screen and (min-width: 641px) {
     float: left;

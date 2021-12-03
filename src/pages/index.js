@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     h2 {
-      font-size: 3em;
+      font-size: 2.5em;
     }
 
     p {

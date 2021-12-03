@@ -34,20 +34,19 @@ const Experience = () => {
 
   const ExperienceContainer = styled.div`
     height: 100vh;
-    margin-left: 200px;
     position: relative;
 
     @media screen and (max-width: 640px) {
-      display: none;
+      margin: 0 5%;
+    }
+
+    @media screen and (min-width: 641px) {
+      margin-left: 200px;
     }
   `;
 
   const ExperienceButtons = styled.div`
-    float: left;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50%;
 
     ul {
       padding-left: 0;
@@ -62,6 +61,18 @@ const Experience = () => {
     .selected {
       text-decoration: underline;
     }
+
+    @media screen and (max-width: 640px) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media screen and (min-width: 641px) {
+      float: left;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+    }
   `;
 
   const ExperienceContent = styled.div`
@@ -70,6 +81,13 @@ const Experience = () => {
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 641px) {
+    }
   `;
 
   const Employer = styled.button`
@@ -80,6 +98,12 @@ const Experience = () => {
     font-weight: bold;
     text-transform: uppercase;
     vertical-align: middle;
+
+    @media screen and (max-width: 640px) {
+    }
+
+    @media screen and (min-width: 641px) {
+    }
   `;
 
   const ExperienceDescription = styled.div`
@@ -93,6 +117,12 @@ const Experience = () => {
       font-weight: bold;
       line-height: 1.2em;
       margin-bottom: 10px;
+    }
+
+    @media screen and (max-width: 640px) {
+    }
+
+    @media screen and (min-width: 641px) {
     }
   `;
 
