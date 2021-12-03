@@ -9,6 +9,26 @@ const HeroContainer = styled.div`
 `;
 
 const HeroContent = styled.div`
+  margin-right: 5%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: right;
+
+  p {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  a {
+    border: solid black 2px;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
   @media screen and (max-width: 640px) {
     p {
       font-size: 0.85em;
@@ -29,26 +49,6 @@ const HeroContent = styled.div`
     a {
       padding: 1vh 1vw;
     }
-  }
-
-  margin-right: 5%;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  text-align: right;
-
-  p {
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  a {
-    border: solid black 2px;
-    color: black;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
   }
 `;
 

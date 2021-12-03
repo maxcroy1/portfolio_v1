@@ -39,9 +39,9 @@ const StyledMenu = styled.nav`
   }
 `;
 
-const BurgerMenu = ({ open, navLinks }) => {
+const BurgerMenu = ({ navLinks, open, setOpen }) => {
   return (
-    <StyledMenu open={open}>
+    <StyledMenu open={open} onClick={() => setOpen(!open)}>
       <ul>
         {navLinks &&
           navLinks.map(({ url, name }, i) => (
@@ -52,6 +52,7 @@ const BurgerMenu = ({ open, navLinks }) => {
                 spy={true}
                 smooth={true}
                 duration={600}
+                onClick={() => setOpen(!open)}
               >
                 {i + 1}. {name}
               </Link>

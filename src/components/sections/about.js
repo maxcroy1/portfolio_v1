@@ -4,24 +4,32 @@ import styled from "styled-components";
 
 const AboutContainer = styled.div`
   height: 100vh;
-  margin-left: 200px;
   position: relative;
 
-  @media screen and (max-width: 640px) {
-    display: none;
+  @media screen and (min-width: 641px) {
+    margin-left: 200px;
   }
 `;
 
 const AboutContentContainer = styled.div`
-  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  width: 50%;
+
+  @media screen and (max-width: 640px) {
+    margin: 0 5%;
+  }
+
+  @media screen and (min-width: 641px) {
+    float: left;
+    width: 50%;
+  }
 `;
 
 const AboutContent = styled.div`
-  width: 400px;
+  @media screen and (min-width: 641px) {
+    width: 400px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -30,6 +38,10 @@ const ImageContainer = styled.div`
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 const ImageContent = styled.div`
@@ -78,7 +90,7 @@ const About = () => {
       </AboutContentContainer>
       <ImageContainer>
         <ImageContent>
-          <StaticImage src="../../images/me.JPG" width={400}/>
+          <StaticImage src="../../images/me.JPG" width={400} />
         </ImageContent>
       </ImageContainer>
     </AboutContainer>
