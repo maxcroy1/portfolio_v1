@@ -1,6 +1,7 @@
 import React from "react";
 import { bool, func } from "prop-types";
 import styled from "styled-components";
+import { Link } from "react-scroll";
 
 const StyledMenu = styled.nav`
   background: #faf2e5;
