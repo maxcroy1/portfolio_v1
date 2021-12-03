@@ -36,6 +36,10 @@ const Experience = () => {
     height: 100vh;
     margin-left: 200px;
     position: relative;
+
+    @media screen and (max-width: 640px) {
+      display: none;
+    }
   `;
 
   const ExperienceButtons = styled.div`
@@ -93,7 +97,7 @@ const Experience = () => {
   `;
 
   return (
-    <ExperienceContainer  id="experience">
+    <ExperienceContainer id="experience">
       <ExperienceButtons>
         <h2>
           <u>Experience</u>

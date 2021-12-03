@@ -16,16 +16,39 @@ const GlobalStyle = createGlobalStyle`
     font-family: Helvetica, sans-serif;
   }
 
+  @media screen and (max-width: 640px) {
+    h1 {
+      font-size: 3.3em;
+    }
+  }
+
+  @media screen and (min-width: 641px) {
+    h1 {
+      font-size: 7em;
+    }
+
+    h2 {
+      font-size: 3.8em;
+      margin: 0;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 1.5em;
+    }
+
+    h4 {
+      margin: 0;
+    }
+  }
+
   h1 {
-    font-size: 7em;
     line-height: 1em;
     margin: auto;
     text-transform: uppercase;
   }
 
   h2 {
-    font-size: 3.8em;
-    margin: 0;
     text-decoration: underline;
     text-transform: uppercase;
   }
@@ -35,16 +58,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h3 {
-    margin: 0;
-    font-size: 1.5em;
-
     a {
       color: black;
     }
-  }
-
-  h4 {
-    margin: 0;
   }
 
   a:hover {

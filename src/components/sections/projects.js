@@ -5,6 +5,10 @@ const ProjectsContainer = styled.div`
   height: 100vh;
   margin-left: 200px;
   position: relative;
+
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
 `;
 
 const ProjectSelectorContainer = styled.div`

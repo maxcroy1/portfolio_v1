@@ -9,6 +9,28 @@ const HeroContainer = styled.div`
 `;
 
 const HeroContent = styled.div`
+  @media screen and (max-width: 640px) {
+    p {
+      font-size: 0.85em;
+      margin: 10px auto 20px;
+    }
+
+    a {
+      padding: 5px;
+    }
+  }
+
+  @media screen and (min-width: 641px) {
+    p {
+      font-size: 1.8em;
+      margin: 2vh auto 4vh;
+    }
+
+    a {
+      padding: 1vh 1vw;
+    }
+  }
+
   margin-right: 5%;
   position: absolute;
   right: 0;
@@ -17,9 +39,7 @@ const HeroContent = styled.div`
   text-align: right;
 
   p {
-    font-size: 1.8em;
     font-weight: bold;
-    margin: 2vh auto 4vh;
     text-transform: uppercase;
   }
 
@@ -27,7 +47,6 @@ const HeroContent = styled.div`
     border: solid black 2px;
     color: black;
     font-weight: bold;
-    padding: 1vh 1vw;
     text-transform: uppercase;
     text-decoration: none;
   }
@@ -47,11 +66,7 @@ const Hero = () => {
           <br />
           {`//`} web3 Developer
         </p>
-        <Link
-          to="contact"
-          smooth={true}
-          duration={600}
-        >
+        <Link to="contact" smooth={true} duration={600}>
           Get In Touch
         </Link>
       </HeroContent>
