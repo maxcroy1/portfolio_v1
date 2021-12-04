@@ -17,7 +17,7 @@ const ExperienceContainer = styled.div`
   }
 `;
 
-const ExperienceButtons = styled.div`
+const ExperienceContent = styled.div`
   position: relative;
 
   ul {
@@ -53,22 +53,7 @@ const ExperienceButtons = styled.div`
   }
 `;
 
-const ExperienceContent = styled.div`
-  float: left;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-
-  @media screen and (max-width: 640px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 641px) {
-  }
-`;
-
-const Employer = styled.button`
+const EmployerTab = styled.button`
   background-color: #faf2e5;
   border: none;
   display: inline;
@@ -81,9 +66,14 @@ const Employer = styled.button`
     font-size: 0.95em;
     white-space: nowrap;
   }
+`;
 
-  @media screen and (min-width: 641px) {
-  }
+const ExperienceContentDesktopOnly = styled.div`
+  float: left;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
 `;
 
 const Experience = ({ innerWidth }) => {
@@ -117,7 +107,7 @@ const Experience = ({ innerWidth }) => {
 
   return (
     <ExperienceContainer id="experience">
-      <ExperienceButtons>
+      <ExperienceContent>
         <h2>
           <u>Experience</u>
         </h2>
@@ -127,14 +117,14 @@ const Experience = ({ innerWidth }) => {
               const { company } = node.frontmatter;
               return (
                 <li>
-                  <Employer
+                  <EmployerTab
                     key={i}
                     isActive={activeTabId === i}
                     onClick={() => setActiveTabId(i)}
                     className={activeTabId === i ? "selected" : null}
                   >
                     {company}
-                  </Employer>
+                  </EmployerTab>
                 </li>
               );
             })}
@@ -147,14 +137,14 @@ const Experience = ({ innerWidth }) => {
         ) : (
           <></>
         )}
-      </ExperienceButtons>
+      </ExperienceContent>
       {!!innerWidth && innerWidth >= 641 ? (
-        <ExperienceContent>
+        <ExperienceContentDesktopOnly>
           <ExperienceDescription
             activeTabId={activeTabId}
             jobsData={jobsData}
           />
-        </ExperienceContent>
+        </ExperienceContentDesktopOnly>
       ) : (
         <></>
       )}
