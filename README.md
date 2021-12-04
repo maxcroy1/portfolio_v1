@@ -1,5 +1,5 @@
-<h1 align="center"><a href="maxcroy.com" target="_blank">Portfolio V1</a></h1>
-Welcome to my first portfolio! My goal with this project was to build an effective portfolio that was eye-catching - hopefully you feel like I was successful!
+<h1 align="center">[Portfolio V1](https://maxcroy.com)</h1>
+Welcome to my first portfolio! My goal with this project was to build an effective portfolio that was eye-catching - hopefully you feel like I was successful! 
 
 # Tech Stack
 - Gatsby
