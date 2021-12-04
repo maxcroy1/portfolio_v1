@@ -21,8 +21,9 @@ const FooterContainer = styled.div`
     display: none;
   }
 
-  @media screen and (max-width: 641px){
-    display: none;
+  @media screen and (max-width: 640px) {
+    position: relative;
+    width: 100%auto;
   }
 `;
 
@@ -49,7 +50,7 @@ const StyledEmailSection = styled.div``;
 const StyledEmail = styled.a`
   color: black;
   display: block;
-  font-weight:bold;
+  font-weight: bold;
   margin-left: 50px;
   margin-top: 140px;
   text-decoration: none;
@@ -57,43 +58,63 @@ const StyledEmail = styled.a`
 `;
 
 const StyledCopyright = styled.p`
-  left: -80px;
-  margin-left: 50px;
-  position: relative;
-  transform: rotate(-90deg);
-  width: 160px;
+  @media screen and (min-width: 1008px) {
+    left: -80px;
+    margin-left: 50px;
+    position: relative;
+    transform: rotate(-90deg);
+    width: 160px;
+  }
+
+  @media screen and (max-width: 640px) {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 `;
 
-const Footer = () => {
+const Footer = ({ innerWidth }) => {
   const Year = new Date().getFullYear();
 
   return (
     <FooterContainer>
-      <StyledEmailSection>
-        <DecorativeDiv></DecorativeDiv>
-        <StyledEmail href={`mailto:${email}`} target="_blank" rel="noreferrer">
-          {email}
-        </StyledEmail>
-      </StyledEmailSection>
+      {innerWidth && innerWidth >= 1008 ? (
+        <StyledEmailSection>
+          <DecorativeDiv></DecorativeDiv>
+          <StyledEmail
+            href={`mailto:${email}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {email}
+          </StyledEmail>
+        </StyledEmailSection>
+      ) : (
+        <></>
+      )}
       <StyledCopyright>&copy; {Year} Maxwell Croy</StyledCopyright>
-      <StyledSocialLinks>
-        <ul>
-          {socialMedia &&
-            socialMedia.map(({ url, name }, i) => (
-              <li key={i}>
-                <a
-                  href={url}
-                  aria-label={name}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Icon name={name} />
-                </a>
-              </li>
-            ))}
-        </ul>
-        <DecorativeDiv></DecorativeDiv>
-      </StyledSocialLinks>
+      {innerWidth && innerWidth >= 1008 ? (
+        <StyledSocialLinks>
+          <ul>
+            {socialMedia &&
+              socialMedia.map(({ url, name }, i) => (
+                <li key={i}>
+                  <a
+                    href={url}
+                    aria-label={name}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <Icon name={name} />
+                  </a>
+                </li>
+              ))}
+          </ul>
+          <DecorativeDiv></DecorativeDiv>
+        </StyledSocialLinks>
+      ) : (
+        <></>
+      )}
     </FooterContainer>
   );
 };

@@ -3,6 +3,9 @@ import { bool, func } from "prop-types";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
+import { socialMedia } from "../../config";
+import { Icon } from "../icons";
+
 const StyledMenu = styled.nav`
   background: #faf2e5;
   display: flex;
@@ -39,6 +42,13 @@ const StyledMenu = styled.nav`
   }
 `;
 
+const StyledSocialLinks = styled.div`
+  li {
+    display: inline;
+    margin: 0 7px;
+  }
+`;
+
 const BurgerMenu = ({ navLinks, open, setOpen }) => {
   return (
     <StyledMenu open={open} onClick={() => setOpen(!open)}>
@@ -59,6 +69,23 @@ const BurgerMenu = ({ navLinks, open, setOpen }) => {
             </li>
           ))}
       </ul>
+      <StyledSocialLinks>
+        <ul>
+          {socialMedia &&
+            socialMedia.map(({ url, name }, i) => (
+              <li key={i}>
+                <a
+                  href={url}
+                  aria-label={name}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <Icon name={name} />
+                </a>
+              </li>
+            ))}
+        </ul>
+      </StyledSocialLinks>
     </StyledMenu>
   );
 };

@@ -10,12 +10,26 @@ const ZOne = styled.div`
 
 const ZTwo = styled.div`
   position: fixed;
-  z-index: 2;
+
+  @media screen and (min-width: 641px) {
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 640px) {
+    z-index: 3;
+  }
 `;
 
 const ZThree = styled.div`
-  position: fixed;
-  z-index: 3;
+  @media screen and (min-width: 641px) {
+    position: fixed;
+    z-index: 3;
+  }
+
+  @media screen and (max-width: 640px) {
+    position: relative;
+    z-index: 2;
+  }
 `;
 
 const Layout = ({ children, innerWidth }) => {
@@ -26,7 +40,7 @@ const Layout = ({ children, innerWidth }) => {
       </ZTwo>
       <ZOne>{children}</ZOne>
       <ZThree>
-        <Footer />
+        <Footer innerWidth={innerWidth} />
       </ZThree>
     </>
   );
