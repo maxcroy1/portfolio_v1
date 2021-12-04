@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import { createGlobalStyle } from "styled-components";
 
 import {
@@ -83,13 +83,21 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const IndexPage = () => {
+  const [innerWidth, setInnerWidth] = useState(641);
+
+  useEffect(() => {
+    if (window !== undefined) {
+      setInnerWidth(window.innerWidth);
+    }
+  }, []);
+
   return (
     <>
       <GlobalStyle />
-      <Layout>
+      <Layout innerWidth={innerWidth}>
         <Hero />
         <About />
-        <Experience />
+        <Experience innerWidth={innerWidth} />
         <Projects />
         <Contact />
       </Layout>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 
@@ -35,15 +35,8 @@ const StyledLinks = styled.div`
 
 const BurgerContainer = styled.div``;
 
-const Nav = () => {
+const Nav = ({ innerWidth }) => {
   const [open, setOpen] = useState(false);
-  const [innerWidth, setInnerWidth] = useState(641);
-
-  useEffect(() => {
-    if (window !== undefined) {
-      setInnerWidth(window.innerWidth);
-    };
-  }, []);
 
   return (
     <>

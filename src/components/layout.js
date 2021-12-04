@@ -18,11 +18,11 @@ const ZThree = styled.div`
   z-index: 3;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, innerWidth }) => {
   return (
     <>
       <ZTwo>
-        <Nav />
+        <Nav innerWidth={innerWidth} />
       </ZTwo>
       <ZOne>{children}</ZOne>
       <ZThree>
