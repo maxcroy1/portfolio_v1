@@ -3,28 +3,37 @@ import styled from "styled-components";
 
 const ProjectsContainer = styled.div`
   height: 100vh;
-  margin-left: 200px;
   position: relative;
 
   @media screen and (max-width: 640px) {
-    display: none;
+    margin: 0 5%;
+  }
+
+  @media screen and (min-width: 641px) {
+    margin-left: 200px;
   }
 `;
 
 const ProjectSelectorContainer = styled.div`
-  float: left;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  width: 50%;
+
+  @media screen and (min-width: 641px) {
+    float: left;
+    width: 50%;
+  }
 `;
 
 const ProjectContentContainer = styled.div`
-  float: left;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
+
+  @media screen and (min-width: 641px) {
+    float: left;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+  }
 `;
 
 const ComingSoon = styled.h2`
@@ -32,23 +41,38 @@ const ComingSoon = styled.h2`
 
   .seethrough {
     color: black;
-    -webkit-text-fill-color: #FAF2E5; /* Will override color (regardless of order) */
+    -webkit-text-fill-color: #faf2e5; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
   }
+
+  @media screen and (max-width: 640px) {
+    margin-top: 10px;
+  }
 `;
 
-const Projects = () => {
+const Projects = ({ innerWidth }) => {
   return (
-    <ProjectsContainer  id="projects">
+    <ProjectsContainer id="projects">
       <ProjectSelectorContainer>
         <h2>Projects</h2>
+        {innerWidth && innerWidth <= 640 ? (
+          <ComingSoon>
+            <span className="seethrough">Coming</span> Soon
+          </ComingSoon>
+        ) : (
+          <></>
+        )}
       </ProjectSelectorContainer>
-      <ProjectContentContainer>
-        <ComingSoon>
-          <span className="seethrough">Coming</span> Soon
-        </ComingSoon>
-      </ProjectContentContainer>
+      {innerWidth && innerWidth >= 641 ? (
+        <ProjectContentContainer>
+          <ComingSoon>
+            <span className="seethrough">Coming</span> Soon
+          </ComingSoon>
+        </ProjectContentContainer>
+      ) : (
+        <></>
+      )}
     </ProjectsContainer>
   );
 };

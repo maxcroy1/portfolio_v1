@@ -3,12 +3,6 @@ import styled from "styled-components";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const DescriptionContainer = styled.div`
-  width: 450px;
-
-  h4 {
-    margin-top: 10px;
-  }
-
   li {
     font-weight: bold;
     line-height: 1.2em;
@@ -16,9 +10,32 @@ const DescriptionContainer = styled.div`
   }
 
   @media screen and (max-width: 640px) {
+    width: 100%;
+
+    h3 {
+      margin: 5px 0;
+    }
+
+    h4 {
+      margin: 5px 0;
+    }
+
+    ul {
+      padding: none;
+    }
+
+    li {
+      font-size: 0.8em;
+      list-style: disc;
+    }
   }
 
   @media screen and (min-width: 641px) {
+    width: 450px;
+
+    h4 {
+      margin-top: 10px;
+    }
   }
 `;
 

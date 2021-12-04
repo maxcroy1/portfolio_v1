@@ -7,7 +7,7 @@ const AboutContainer = styled.div`
   position: relative;
 
   @media screen and (max-width: 640px) {
-    margin: 0 5%;
+    margin: 15% 5%;
   }
 
   @media screen and (min-width: 641px) {

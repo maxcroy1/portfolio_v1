@@ -98,7 +98,7 @@ const IndexPage = () => {
         <Hero />
         <About />
         <Experience innerWidth={innerWidth} />
-        <Projects />
+        <Projects innerWidth={innerWidth} />
         <Contact />
       </Layout>
     </>

@@ -20,12 +20,7 @@ const ExperienceContainer = styled.div`
 const ExperienceContent = styled.div`
   position: relative;
 
-  ul {
-    padding-left: 0;
-  }
-
   li {
-    list-style: none;
     margin-bottom: 10px;
     padding: 0;
   }
@@ -37,12 +32,6 @@ const ExperienceContent = styled.div`
   @media screen and (max-width: 640px) {
     top: 50%;
     transform: translateY(-50%);
-
-    ul {
-      display: flex;
-      overflow-x: auto;
-      width: 100%;
-    }
   }
 
   @media screen and (min-width: 641px) {
@@ -50,6 +39,18 @@ const ExperienceContent = styled.div`
     top: 50%;
     transform: translateY(-50%);
     width: 50%;
+  }
+`;
+
+const TabList = styled.ul`
+  list-style: none;
+  padding-left: 0;
+
+  @media screen and (max-width: 640px) {
+    display: flex;
+    margin-bottom: 0;
+    overflow-x: auto;
+    width: 100%;
   }
 `;
 
@@ -111,7 +112,7 @@ const Experience = ({ innerWidth }) => {
         <h2>
           <u>Experience</u>
         </h2>
-        <ul>
+        <TabList  >
           {jobsData &&
             jobsData.map(({ node }, i) => {
               const { company } = node.frontmatter;
@@ -128,7 +129,7 @@ const Experience = ({ innerWidth }) => {
                 </li>
               );
             })}
-        </ul>
+        </TabList>
         {!!innerWidth && innerWidth <= 640 ? (
           <ExperienceDescription
             activeTabId={activeTabId}
