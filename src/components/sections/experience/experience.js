@@ -57,6 +57,7 @@ const TabList = styled.ul`
 const EmployerTab = styled.button`
   background-color: #faf2e5;
   border: none;
+  color: black;
   display: inline;
   font-size: 1.5em;
   font-weight: bold;
