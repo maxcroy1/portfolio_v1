@@ -43,7 +43,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   a.active {
-    border-bottom: 2px solid black;
+    @media screen and (min-width: 641px) {
+      border-bottom: 2px solid black;
+    }
   }
 
   @media screen and (max-width: 640px) {

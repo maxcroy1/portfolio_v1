@@ -65,6 +65,12 @@ const Experience = () => {
     @media screen and (max-width: 640px) {
       top: 50%;
       transform: translateY(-50%);
+
+      ul {
+        display: flex;
+        overflow-x: auto;
+        width: 100%;
+      }
     }
 
     @media screen and (min-width: 641px) {
@@ -100,6 +106,8 @@ const Experience = () => {
     vertical-align: middle;
 
     @media screen and (max-width: 640px) {
+      font-size: 0.95em;
+      white-space: nowrap;
     }
 
     @media screen and (min-width: 641px) {
