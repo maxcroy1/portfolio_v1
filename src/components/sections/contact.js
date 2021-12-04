@@ -3,11 +3,15 @@ import styled from "styled-components";
 
 const ContactContainer = styled.div`
   height: 100vh;
-  margin-left: 200px;
+
   position: relative;
 
   @media screen and (max-width: 640px) {
-    display: none;
+    margin: 0 5%;
+  }
+
+  @media screen and (min-width: 641px) {
+    margin-left: 200px;
   }
 `;
 
@@ -15,7 +19,10 @@ const ContactMessageContainer = styled.div`
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  width: 450px;
+
+  @media screen and (min-width: 641px) {
+    width: 450px;
+  }
 `;
 
 const EmailButton = styled.a`
@@ -30,7 +37,7 @@ const EmailButton = styled.a`
 
 const Contact = () => {
   return (
-    <ContactContainer  id="contact">
+    <ContactContainer id="contact">
       <ContactMessageContainer>
         <h2>Contact</h2>
         <p>
